@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+ typedef struct  Tel
+{
+	long long num;
+	char name[3];
+}T,*PT;
+
+void main()
+{
+	PT p;
+	p = (PT)malloc(sizeof(T)); //为指针分配内存   (PT)作用:强制类型转换为PT指针类型    malloc(sizeof(T)):为指针分配一个结构体T类型大小的内存
+	strcpy(p->name,"Andrew");
+	printf("\n %s \n",p->name);
+	system("pause");
+}
