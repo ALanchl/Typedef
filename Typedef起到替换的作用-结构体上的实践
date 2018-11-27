@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+ typedef struct  Tel
+{
+	long long num;
+	char name[3];
+}s,*p;
+
+void main()
+{
+	s s1;//s就是一个结构体，p就是一个结构体指针
+	p p1=&s1;
+	strcpy(s1.name,"shhhha");
+	printf("%d\n", sizeof(struct Tel));//结构体的大小
+	printf("%d,%d\n",sizeof(s),sizeof(p));//s和结构体一样大，所有指针的大小均为4个字节
+
+	s1.num = 20;
+	p1->num = 2738236487326432;
+	printf("\n  %lld  \n",p1->num);
+	
+	system("pause");
+}
